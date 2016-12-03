@@ -1,0 +1,33 @@
+<html>
+<head>
+<title></title>
+<script src="/public/js/jQuery"/>
+
+<script type="javascript">
+$.ajax({
+	url:'http://hujn.ploveruav.com/ajax/ajax.php',
+	type:'get',
+	dataType:'json',
+	error:function(){
+	},
+	success:function(result){
+		if(result.code==1){
+			html='';
+			$.each(result.data,function(key,value){
+				html+='<li><a href="/">'+value.key+'</a></li>';
+			}
+			$("#ajax.html").html(html);
+		}else{
+			alert("请求数据失败");
+		}
+	},
+	
+});
+</script>
+
+</head>
+
+<body>
+</body>
+
+</html>

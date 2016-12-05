@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>LOGIN</title>
+</head>
+<body>
+<!--action的值是提交给网页的地址-->
+<!--method提交的方式-->
+<form action="getInfo.html" method="get">
+用户名：<input type="text" name="userName"/><br/>
+密&nbsp;&nbsp;码：<input type="password" name="passWord"/><br/>
+<input type="submit" value="submit"/>
+<input type="reset" value="reset"/>
+
+
+<br/>
+<br/>
+<input type="checkbox" name="cities" value="bj">Beijing
+<input type="checkbox" name="cities" value="SH">Shanghai
+<input type="checkbox" name="cities" value="NY">New York
+<input type="checkbox" name="cities" value="TK">Tokyo
+
+<br/>
+<br/>
+<input type="radio" name="genda" value="boy">Boy
+<input type="radio" name="genda" value="girl">Girl
+<input type="radio" name="genda" value="rather">Rather not sure
+
+<br/>
+<br/>
+<select name="address" size="2" mulitipe>
+<option value="bj">Beijing</option>
+<option value="SH">Shanghai</option>
+<option value="NY">New York</option>
+</select>
+
+<br/>
+<br/>
+<input type="comment" name="some"/>
+<br/>
+<textarea name="text_area" cols="60" rows="10">
+</textarea>
+<br/>
+<input type="file" name="file_load"/>上传文件
+
+<br/>
+<br/>
+隐藏域的使用：
+<input type="hidden" name="hint_data" value="OK"/>
+<input type="submit" value="sumbit"/>
+<br/>
+<input type="image" src="imgs.png"/>
+</form>
+</body>
+</html>

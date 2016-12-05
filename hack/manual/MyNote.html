@@ -1,0 +1,121 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>MY NOTE 1.0</title>
+<style type="text/css">
+body{
+	font-family:'微软雅黑';
+}
+.header{
+	width:1200px;
+	height:48px;
+	margin: 0 auto;
+	background-color:#6d9eeb;
+	text-align:center;
+}
+
+.content{
+	margin:0 auto;
+	width:1200px;
+	height:400px;
+	background-color:#cfe2f3;
+}
+
+.footer{
+	margin:0 auto;
+	width:1200px;
+	height:100px;
+	background-color:#6d9eeb;
+	text-align:center;
+}
+
+.form_some{
+	padding-top:30px;
+	padding-left:50px;
+	padding-right:120px;
+}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	 $("#signup_form").validate({
+		rules:{
+			password:{
+				minlength:6
+			},
+			confirm_password:{
+				minlength:6,
+				equalTo:"#password"
+			}
+		},
+		messages:{
+			password:{
+				minlength:"Passwords must be at least 6 characters"
+			},
+			confirm_password:{
+				minlength:"Passwords must be at least 6 characters",
+				equalTo:"Yours passwords do not match";
+			}
+		}
+	 });
+	});
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+<h1>Welcome! Make a good day!</h1>
+</div>
+
+
+<div class="content">
+<div class="form_some">
+<form action="MySQL.php" method="post" enctype="multipart/form-data">
+<label for="sql_content">请输入执行语句(限select):</label>
+<input type="text" name="sql_content" />
+<input type="submit" value="执行"/>
+</form>
+<br>
+<hr>
+<br>
+
+<fieldset>
+
+<div style="float:right;width:300px;height:100px;border:1px soild #eee;">
+<form action="show_pic.php" method="post">
+<label for="image_pic">显示图片的序号：</label>
+<input type="text" name="image_pic"/>
+<input type="submit" value="确定"/>
+</form>
+</div>
+
+<form action="MySQL.php" method="post" enctype="multipart/form-data">
+<label for="insert_content">时间：</label>
+<input type="text" name="time_content" size="40"/><br><br>
+<input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
+<label for="pics">可上传图片：</label>
+<input type="file" name="pic" size="30"/><br><br>
+<label for="main_content">记事：</label>
+<textarea name="main_content" rows="4" cols="42"></textarea><br>
+<input type="submit" value="提交"/>
+<input type="reset" value="清除"/>
+</form>
+</fieldset>
+
+
+
+
+</div>
+</div>
+
+
+<div class="footer">
+&copy2015:hujun123qwe
+<br/>
+<a href="mail.163.com">hujun123qwe@163.com</a>
+</div>
+
+</body>
+</html>

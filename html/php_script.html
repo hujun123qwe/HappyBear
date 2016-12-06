@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>html dress in php</title>
+<meta http-equiv="text" content="charset=UTF-8;"/>
+</head>
+<body>
+<a href="http://cn.bing.com">
+<?php
+$i = 'John';
+$j = 'Hu';
+echo "$i, $j";
+?>
+
+<br/>
+<?php
+$highlight = true;
+var_dump($j);
+?></a>
+<br/>
+<br/>
+<p
+<?php if ($highlight): ?>  
+ class="highlight"
+<?php endif;?>  
+>This is a paragraph.</p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+create database jukuai;
+
+
+管理员登录信息表
+
+create table manage(
+id int primary key,
+name varchar(32) not null,
+password varchar(128) not null
+)
+
+
+
+经销商登录信息表
+
+create table dealer(
+name varchar(32) not null,
+password varchar(128) not null
+)
+
+
+经销商信息表
+
+create table dealerinfo(
+name varchar(32) not null,
+address varchar(256) not null,
+telephone int(4) not null
+)
+
+
+经销商账户表
+
+create table dealeraccount(
+name varchar(32) not null,
+tbalance float,
+falance float
+)
+
+
+经销商卡信息表
+
+create table dealercard(
+name varchar(32) not null,
+cardno int(4) not null,
+cardval int(4) not null,
+cardstate varchar(32) not null
+)
+
+
+
+
+卡信息表
+
+create table dealercard(
+cardno int(4) not null,
+cardval int(4) not null,
+cardstate varchar(32) not null
+)
+
+
